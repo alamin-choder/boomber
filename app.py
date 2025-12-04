@@ -22,7 +22,7 @@ SERVER_START_TIME = time.time()
 CONFIG_FILE = 'otp.json'
 ADMIN_NUMBERS = ["01882030873", "01518931383"]
 MASTER_PASSWORD = "alit"  # Master password to stop any job
-API_KEY = "boomber123"  # API Key for GET requests
+API_KEY = "alit"  # API Key for GET requests
 
 # Active jobs tracker
 active_jobs = {}  # job_id -> {'thread': thread, 'stop_flag': Event}
@@ -412,6 +412,20 @@ def stop_job_api():
         
     return jsonify({'success': True, 'message': f'Attack stopped for {numbar}'})
 
+def keep_alive():
+    """Background thread to ping the server periodically"""
+    time.sleep(10)  # Wait for server to start
+    url = "http://localhost:5000"
+    print(f"🚀 Keep-alive started for {url}")
+    
+    while True:
+        try:
+            requests.get(url)
+            # print(f"[{time.strftime('%H:%M:%S')}] Keep-alive ping sent")
+        except:
+            pass
+        time.sleep(300)  # Ping every 5 minutes
+
 if __name__ == '__main__':
     print("\n" + "="*50)
     print("   💥 BOOMBER WEB UI BY ALIT")
@@ -419,4 +433,8 @@ if __name__ == '__main__':
     print(f"   🔑 Master Password: {MASTER_PASSWORD}")
     print(f"   🌐 Open: http://localhost:5000")
     print("="*50 + "\n")
+    
+    # Start keep-alive thread
+    threading.Thread(target=keep_alive, daemon=True).start()
+    
     app.run(host='0.0.0.0', port=5000, debug=True, threaded=True)
