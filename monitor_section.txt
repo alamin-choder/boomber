@@ -1,0 +1,26 @@
+﻿                    <div class="monitor-grid monitor-6">
+                        <div class="monitor-item">
+                            <span class="monitor-value" id="requestCount">0</span>
+                            <span class="monitor-label">Requests</span>
+                        </div>
+                        <div class="monitor-item">
+                            <span class="monitor-value" id="progressPercent">0%</span>
+                            <span class="monitor-label">Progress</span>
+                        </div>
+                        <div class="monitor-item">
+                            <span class="monitor-value" id="timeLeft">--:--</span>
+                            <span class="monitor-label">Time Left</span>
+                        </div>
+                        <div class="monitor-item">
+                            <span class="monitor-value" id="currentApi">-</span>
+                            <span class="monitor-label">Current</span>
+                        </div>
+                        <div class="monitor-item">
+                            <span class="monitor-value" id="totalVisitors">0</span>
+                            <span class="monitor-label">Visitors</span>
+                        </div>
+                        <div class="monitor-item">
+                            <span class="monitor-value" id="serverUptime">0m</span>
+                            <span class="monitor-label">Uptime</span>
+                        </div>
+                    </div>

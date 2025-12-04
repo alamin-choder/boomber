@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sms-boomber By ALIT</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Background -->
+    <div class="bg-gradient"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header glass">
+            <div class="brand">
+                <span class="brand-icon">⚡</span>
+                <span class="brand-name">SMS-BOOMBER</span>
+                <span class="brand-by">by Alit</span>
+            </div>
+            <div class="header-stats">
+                <div class="header-stat">
+                    <span class="stat-num" id="navActive">0</span>
+                    <span class="stat-text">Active</span>
+                </div>
+                <div class="header-stat">
+                    <span class="stat-num" id="navApis">0</span>
+                    <span class="stat-text">APIs</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats -->
+        <div class="stats-grid">
+            <div class="stat-card glass">
+                <span class="stat-emoji">📨</span>
+                <div class="stat-info">
+                    <span class="stat-value" id="totalSent">0</span>
+                    <span class="stat-label">Sent</span>
+                </div>
+            </div>
+            <div class="stat-card glass">
+                <span class="stat-emoji">✓</span>
+                <div class="stat-info">
+                    <span class="stat-value green" id="totalSuccess">0</span>
+                    <span class="stat-label">Success</span>
+                </div>
+            </div>
+            <div class="stat-card glass">
+                <span class="stat-emoji">✗</span>
+                <div class="stat-info">
+                    <span class="stat-value red" id="totalFail">0</span>
+                    <span class="stat-label">Failed</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Left: Form + Monitor -->
+            <div class="left-section">
+                <!-- Attack Form -->
+                <div class="card glass">
+                    <h2 class="card-title">🎯 New Attack</h2>
+                    <form id="jobForm">
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <div class="input-wrap">
+                                <input type="text" id="phone" placeholder="01XXXXXXXXX" required>
+                                <span class="input-icon" id="phoneIcon"></span>
+                            </div>
+                            <span class="input-hint" id="operatorHint"></span>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" id="addedBy" placeholder="Anonymous">
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" id="password" placeholder="••••••" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Duration</label>
+                                <div class="duration-flex">
+                                    <input type="number" id="duration" value="5" min="1">
+                                    <select id="durationUnit">
+                                        <option value="minutes">Min</option>
+                                        <option value="hours">Hr</option>
+                                        <option value="days">Day</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Mode</label>
+                                <div class="mode-btns">
+                                    <button type="button" class="mode-btn active" data-mode="normal">⚡</button>
+                                    <button type="button" class="mode-btn" data-mode="extreme">🔥</button>
+                                    <button type="button" class="mode-btn" data-mode="stealth">🥷</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            🚀 Launch Attack
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Live Monitor -->
+                <div class="card glass">
+                    <div class="card-header">
+                        <h2 class="card-title">🔴 Live Monitor</h2>
+                        <span class="status-badge" id="monitorStatus">Standby</span>
+                    </div>
+                    <div class="monitor-grid monitor-6">
+                        <div class="monitor-item">
+                            <span class="monitor-value" id="requestCount">0</span>
+                            <span class="monitor-label">Requests</span>
+                        </div>
+                        <div class="monitor-item">
+                            <span class="monitor-value" id="progressPercent">0%</span>
+                            <span class="monitor-label">Progress</span>
+                        </div>
+                        <div class="monitor-item">
+                            <span class="monitor-value" id="timeLeft">--:--</span>
+                            <span class="monitor-label">Time Left</span>
+                        </div>
+                        <div class="monitor-item">
+                            <span class="monitor-value" id="currentApi">-</span>
+                            <span class="monitor-label">Current</span>
+                        </div>
+                        <div class="monitor-item">
+                            <span class="monitor-value" id="totalVisitors">0</span>
+                            <span class="monitor-label">Visitors</span>
+                        </div>
+                        <div class="monitor-item">
+                            <span class="monitor-value" id="serverUptime">0m</span>
+                            <span class="monitor-label">Uptime</span>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: History + APIs -->
+            <div class="right-section">
+                <!-- History -->
+                <div class="card glass">
+                    <div class="card-header">
+                        <h2 class="card-title">📋 History</h2>
+                        <select id="statusFilter" class="filter-select">
+                            <option value="all">All</option>
+                            <option value="running">Running</option>
+                            <option value="completed">Done</option>
+                            <option value="stopped">Stopped</option>
+                        </select>
+                    </div>
+                    <div class="jobs-list" id="jobsList"></div>
+                </div>
+
+                <!-- APIs -->
+                <div class="card glass">
+                    <div class="card-header">
+                        <h2 class="card-title">🛡️ APIs</h2>
+                        <span class="api-count" id="apiCount">0 Ready</span>
+                    </div>
+                    <div class="api-grid" id="apiGrid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="stopModal" class="modal hidden">
+        <div class="modal-bg" onclick="closeModal()"></div>
+        <div class="modal-box glass">
+            <h3>🛑 Stop Attack</h3>
+            <p>Enter password to stop:</p>
+            <input type="password" id="stopPassword" placeholder="Password">
+            <div class="modal-btns">
+                <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+                <button class="btn-stop" onclick="confirmStop()">Stop</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
